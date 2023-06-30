@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500&display=swap');
+
+
+* {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s ease-out;
+  text-decoration: none;
+}
+
+:root {
+  --green: #067a5e;
+  --black: #444;
+  --light-color: #0e0d0d;
+  --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+  --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+  --border: .2rem solid var(--green);
+}
+
+html {
+  font-size: 75.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 2rem 9%;
+}
+
+
+h1 {
+  margin: 10px;
+  text-align: center;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  text-shadow: var(--text-shadow);
+  text-transform: uppercase;
+  color: var(--black);
+  font-size: 3rem;
+  letter-spacing: .2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: .5rem;
+  padding-left: 1rem;
+  border: var(--border);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--green);
+  cursor: pointer;
+  background: #fff;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.btn:hover {
+  color: var(--green);
+  background: #fff;
+  margin-left: 1rem;
+}
+
+.icon-right {
+  color: var(--green);
+  vertical-align: middle;
+}
+
+.icon-right:hover {
+  color: var(--green);
+  background: #fff;
+  vertical-align: middle;
+}

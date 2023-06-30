@@ -1,0 +1,57 @@
+@import url('../App.css');
+
+#contact {
+    background-color: #fff;
+}
+
+#contact form {
+    margin: 0;
+    padding-left: 10rem;
+    padding: 10px;
+    /* width: 700px; */
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+    background-color: #004c6d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+/* .contact-info ul {
+    list-style-type: none;
+}
+
+.icon {
+    color: var(--green);
+    font-size: 30px;
+    padding-bottom: .5rem;
+    vertical-align: middle;
+}
+
+
+span:hover {
+    padding-right: 2rem;
+}
+
+span {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    text-align: center;
+    
+}
+
+span:hover {
+    padding-right: 2rem;
+}
+
+p {
+    color: var(--black);
+    font-size: 1.7rem;
+    line-height: 1.8;
+    padding: 5px;
+} */

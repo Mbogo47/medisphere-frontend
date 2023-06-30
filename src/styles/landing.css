@@ -1,0 +1,13 @@
+@import url('../App.css');
+
+.home {
+    width: 50%;
+    margin-left: 30rem;
+}
+
+@media (max-width: 700px) {
+    .home {
+        width: 50%;
+        margin-left: 15rem;
+    }
+}

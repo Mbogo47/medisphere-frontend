@@ -1,0 +1,47 @@
+@import url('../App.css');
+
+.dashboard {
+    display: flex;
+    padding: 20px;
+}
+
+.dashboard-content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card-body {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card-title {
+    padding-top: 10px;
+}
+
+.icon-dash {
+    width: 50px;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 20px;
+    float: right;
+    color: var(--green);
+}

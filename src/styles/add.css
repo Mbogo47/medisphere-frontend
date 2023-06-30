@@ -1,0 +1,22 @@
+.add-container {
+    position: fixed;
+    z-index: 1;
+    top: 15rem;
+    left: 40rem;
+    background-color: rgba(0,0,0,0.4);
+    width: 50%;
+}
+
+.add{
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: var(--white);
+}
+
+.add input{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+}

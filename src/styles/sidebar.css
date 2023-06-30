@@ -1,0 +1,24 @@
+.sidebar {
+    border: 1px solid var(--green);
+    border-radius: 0.5rem;
+    margin-left: 10px;
+    transition: width 0.3s ease;
+    width: 200px;
+}
+
+.sidebar div {
+    margin-bottom: 10px;
+}
+
+.span-side {
+    margin-left: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    font-weight: 400;
+}
+
+.icons-side {
+    font-size: 20px;
+    color: var(--green);
+    vertical-align: middle;
+}
