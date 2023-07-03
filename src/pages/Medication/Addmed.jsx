@@ -26,7 +26,7 @@ const Addmedication = ({ closeAdd }) => {
             });
             return;
         }
-        fetch(`${apiDomain}/med`, {
+        fetch(`${apiDomain}/medications`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -84,10 +84,9 @@ const Addmedication = ({ closeAdd }) => {
                     onChange={handleChange}
                 />
 
-                <div className='add-buttons'>
-                    <button type='submit'>Add</button>
-                    <button type='button' onClick={handleCancel}>Cancel</button>
-                </div>
+                <button type='submit'>Add</button>
+
+                <button type='button' onClick={handleCancel}>Cancel</button>
 
             </form>
 

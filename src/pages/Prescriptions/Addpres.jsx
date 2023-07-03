@@ -12,7 +12,7 @@ const Addprescription = ({ closeAdd }) => {
         usageInstructions: '',
         dosage: '',
         medicationName: '',
-       
+
     });
 
     const handleChange = (e) => {
@@ -80,7 +80,7 @@ const Addprescription = ({ closeAdd }) => {
                     value={formData.medicationId}
                     onChange={handleChange}
                 />
-                <input 
+                <input
                     type='text'
                     name='usageInstructions'
                     placeholder='Usage Instructions'
@@ -101,7 +101,7 @@ const Addprescription = ({ closeAdd }) => {
                     value={formData.medicationName}
                     onChange={handleChange}
                 />
-            
+
 
 
                 <button type='submit'>Add</button>

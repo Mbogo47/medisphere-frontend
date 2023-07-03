@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { apiDomain } from "../../utils/utilsDomain";
 
-
 const MedicationForm = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const [data, setData] = useState({});
 
     useEffect(() => {
-        fetch(`${apiDomain}/med/${id}`)
+        fetch(`${apiDomain}/medications/${id}`)
             .then((response) => response.json())
             .then((responseData) => {
                 const medicationData = responseData.recordsets[0][0];
@@ -17,11 +16,11 @@ const MedicationForm = () => {
                 console.log(medicationData);
             })
             .catch((error) => console.error(error));
-    } , [id]);
+    }, [id]);
 
     const updateMedication = async () => {
         try {
-            const response = await fetch(`${apiDomain}/med/${id}`, {
+            const response = await fetch(`${apiDomain}/medications/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -73,7 +72,7 @@ const MedicationForm = () => {
                 />
 
                 <input
-                    type="text"     
+                    type="text"
                     name="medicationDosage"
                     placeholder="Medication Dosage"
                     required
@@ -92,7 +91,7 @@ const MedicationForm = () => {
                 <Link to="/dashboard/medication">
                     <button className="btn" type="submit">Update</button>
                 </Link>
-               </form>
+            </form>
         </div>
     );
 };

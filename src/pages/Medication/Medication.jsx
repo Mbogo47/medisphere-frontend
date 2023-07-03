@@ -62,7 +62,6 @@ const Medication = () => {
                     </tr>
                 </thead>
                 {medication && medication.length > 0 && (
-
                     <tbody>
                         {medication.map((med) => (
                             <tr key={med.medicationId}>
