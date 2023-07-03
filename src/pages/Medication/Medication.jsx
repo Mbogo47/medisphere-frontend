@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import '../Appointments/appt.css';
 import { FaPencilAlt } from 'react-icons/fa';
 import { RiDeleteBinFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 import { apiDomain } from '../../utils/utilsDomain';
+import '../Appointments/appt.css';
+import Addmedication from "./Addmed";
 
-const Medical = () => {
+const Medication = () => {
     const [medication, setMedication] = useState([]);
+    const [addOpen, setAddOpen] = useState(false);
 
     useEffect(() => {
         const fetchMedication = async () => {
@@ -25,6 +28,26 @@ const Medical = () => {
         fetchMedication();
     }, []);
 
+    // delete button
+    const deleteMedication = async (medicationId) => {
+        console.log(medicationId);
+
+        try {
+            const response = await fetch(`${apiDomain}/medications/${medicationId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const allMedication = await response.json();
+            setMedication(allMedication.recordset);
+        }
+        catch (err) {
+            console.error(err.message);
+        }
+    };
+
+
     return (
         <div>
             <h1>Medication</h1>
@@ -38,27 +61,37 @@ const Medical = () => {
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {medication.map((med) => (
-                        <tr key={med.medicationId}>
-                            <td>{med.medicationId}</td>
-                            <td>{med.medicationName}</td>
-                            <td>{med.medicationDosage}</td>
-                            <td>{med.usageInstructions}</td>
-                            <td>
-                                <button className="back">
-                                    <FaPencilAlt />
-                                </button>
-                                <button className="back">
-                                    <RiDeleteBinFill />
-                                </button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
+                {medication && medication.length > 0 && (
+
+                    <tbody>
+                        {medication.map((med) => (
+                            <tr key={med.medicationId}>
+                                <td>{med.medicationId}</td>
+                                <td>{med.medicationName}</td>
+                                <td>{med.dosage}</td>
+                                <td>{med.usageInstructions}</td>
+                                <td>
+                                    <Link to={`/dashboard/MedForm/${med.medicationId}`}>
+                                        <button className="back">
+                                            <FaPencilAlt />
+                                        </button>
+                                    </Link>
+                                    <button className="back" onClick={() => deleteMedication(med.medicationId)}>
+                                        <RiDeleteBinFill />
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                )}
             </table>
+            <button onClick={() => setAddOpen(true)}>
+                Add
+            </button>
+            {addOpen &&
+                <Addmedication closeAdd={() => setAddOpen(false)} />}
         </div>
     );
 };
 
-export default Medical;
+export default Medication;

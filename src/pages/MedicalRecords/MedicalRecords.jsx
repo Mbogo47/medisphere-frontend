@@ -44,10 +44,10 @@ const Medical = () => {
                             <td>{record.doctorId}</td>
                             <td>{record.doctorName}</td>
                             <td>
-                                <button className='edit'>
+                                <button className='back'>
                                     <FaPencilAlt />
                                 </button>
-                                <button className='delete' >
+                                <button className='back' >
                                     <RiDeleteBinFill />
                                 </button>
                             </td>

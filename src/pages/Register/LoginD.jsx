@@ -7,6 +7,12 @@ import { apiDomain } from '../../utils/utilsDomain';
 import './login.css';
 
 const DoctorLogin = () => {
+
+    const defaultValues = {
+        email: 'dennis@gmail.com',
+        password: 'Password123&'
+    };
+
     const schema = yup.object().shape({
         email: yup.string().required("Email is required").email("Invalid email format"),
         password: yup.string().required("Password is required"),
@@ -14,6 +20,7 @@ const DoctorLogin = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema),
+        defaultValues: defaultValues 
     });
 
     const navigate = useNavigate();
@@ -61,7 +68,7 @@ const DoctorLogin = () => {
             <div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <h3>Login</h3>
-                    <input type="email" name="email" placeholder="Email" {...register("email")} />
+                    <input type="email" name="email" placeholder="email" {...register("email")} />
                     {errors.email && notify(errors.email?.message)}
                     <input type="password" name="password" placeholder="Password" {...register("password")} />
                     {errors.password && notify(errors.password?.message)}

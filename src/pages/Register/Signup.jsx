@@ -6,21 +6,32 @@ import 'react-toastify/dist/ReactToastify.css';
 import * as yup from "yup";
 import { apiDomain } from "../../utils/utilsDomain";
 import './login.css';
+import { format } from 'date-fns';
 
 const Signup = () => {
 
     const navigate = useNavigate();
-    const onSubmit = (data) => {
+    const onSubmit = (data) => { 
+        const dateofBirth = data.dateOfBirth;
+        const formattedDate = format(new Date(dateofBirth), 'yyyy-MM-dd');
+        
+        let res = {
+            fullName: data.fullName,
+            email: data.email,
+            dateOfBirth: formattedDate,
+            password: data.password
+        }
+        console.log(res);
         fetch(`${apiDomain}/auth/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify(res),
         })
             .then((response) => {
                 if (response.ok) {
-                    toast.success("Login successful");
+                    toast.success("Signup successful");
                     navigate('/patient');
                 } else {
                     response.json().then((data) => {
@@ -31,6 +42,7 @@ const Signup = () => {
             })
             .catch((error) => {
                 toast.error(error);
+                console.log(error);
             });
     };
 
@@ -81,6 +93,7 @@ const Signup = () => {
                     {errors.confirmPassword && <p className="error-message">{errors.confirmPassword.message}</p>}
 
                     <button type="submit">Sign Up</button>
+
 
                     <p className="signin">Already have an account? <Link to={'/patient'} className="log">Login</Link></p>
                 </form>

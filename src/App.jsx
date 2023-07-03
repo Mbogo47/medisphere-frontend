@@ -14,6 +14,9 @@ import Prescription from './pages/Prescriptions/prescription';
 import LoginPatient from './pages/Register/Login';
 import DoctorLogin from './pages/Register/LoginD';
 import Signup from './pages/Register/Signup';
+import Medication from './pages/Medication/Medication'
+import MedicationForm from './pages/Medication/EditMed';
+
 
 function App() {
   return (
@@ -32,7 +35,10 @@ function App() {
             <Route path="home" element={<DashContent />} />
             <Route path="prescription" element={<Prescription />} />
             <Route path="PresForm/:id" element={< PrescriptionForm />} />
+            <Route path="medication" element={<Medication />}/>
+            <Route path="MedForm/:id" element={< MedicationForm />} />
             <Route path="profile" element={<UserProfile />} />
+
           </Route>
         </Routes>
         <ToastContainer />

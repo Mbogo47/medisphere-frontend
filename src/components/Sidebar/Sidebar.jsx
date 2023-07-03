@@ -53,6 +53,15 @@ const SidebarComponent = () => {
                     <MenuItem icon={<FaHome className="icons-side" />} component={<Link to="home" />}  >
                         <span className="span-side">Dashboard</span>
                     </MenuItem>
+                    
+                    <SubMenu label="Pharmacy" className="span-side" icon={<FaPills className="icons-side" />} >
+                        <MenuItem icon={<GiMedicinePills className="icons-side" />} component={<Link to="medication" />}  >
+                            <span className="span-side">Medication</span>
+                        </MenuItem>
+                        <MenuItem icon={<GiMedicines className="icons-side" />} component={<Link to="prescription" />}>
+                            <span className="span-side">Prescriptions</span>
+                        </MenuItem>
+                    </SubMenu>
 
                     <SubMenu label="Doctors" className="span-side" icon={<FaUserMd className="icons-side" />} >
                         <MenuItem icon={<FaCalendar className="icons-side" />} component={<Link to="appointments" />}>
@@ -63,14 +72,6 @@ const SidebarComponent = () => {
                         </MenuItem>
                     </SubMenu>
 
-                    <SubMenu label="Pharmacy" className="span-side" icon={<FaPills className="icons-side" />} >
-                        <MenuItem icon={<GiMedicinePills className="icons-side" />}  >
-                            <span className="span-side">Medication</span>
-                        </MenuItem>
-                        <MenuItem icon={<GiMedicines className="icons-side" />} component={<Link to="prescription" />}>
-                            <span className="span-side">Prescriptions</span>
-                        </MenuItem>
-                    </SubMenu>
 
                     <MenuItem component={<Link to="profile" />}>
                         <FaUserCircle className="icons-side" />

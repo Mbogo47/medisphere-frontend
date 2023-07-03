@@ -8,6 +8,11 @@ const Addprescription = ({ closeAdd }) => {
     const [formData, setFormData] = useState({
         appointmentId: '',
         medicationId: '',
+        patientId: '',
+        usageInstructions: '',
+        dosage: '',
+        medicationName: '',
+       
     });
 
     const handleChange = (e) => {
@@ -54,7 +59,6 @@ const Addprescription = ({ closeAdd }) => {
     return (
         <div className='add-container'>
             <form className='add' onSubmit={handleSubmit}>
-                <ToastContainer />
                 <input
                     type='text'
                     name='appointmentId'
@@ -64,11 +68,42 @@ const Addprescription = ({ closeAdd }) => {
                 />
                 <input
                     type='text'
+                    name='patientId'
+                    placeholder='Patient ID'
+                    value={formData.patientId}
+                    onChange={handleChange}
+                />
+                <input
+                    type='text'
                     name='medicationId'
                     placeholder='Medication ID'
                     value={formData.medicationId}
                     onChange={handleChange}
                 />
+                <input 
+                    type='text'
+                    name='usageInstructions'
+                    placeholder='Usage Instructions'
+                    value={formData.usageInstructions}
+                    onChange={handleChange}
+                />
+                <input
+                    type='text'
+                    name='dosage'
+                    placeholder='Dosage'
+                    value={formData.dosage}
+                    onChange={handleChange}
+                />
+                <input
+                    type='text'
+                    name='medicationName'
+                    placeholder='Medication Name'
+                    value={formData.medicationName}
+                    onChange={handleChange}
+                />
+            
+
+
                 <button type='submit'>Add</button>
 
                 <button type='button' onClick={handleCancel}>Cancel</button>
