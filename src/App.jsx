@@ -1,19 +1,19 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
-import PrescriptionForm from './Editing/EditPres';
-import UserProfile from './components/UserProfile';
-import Appointments from './pages/Appointmentable';
-import Appt from './pages/Apptpage';
-import DashContent from './pages/DashContent';
-import Dashboard from './pages/Dashboard';
-import Landingpage from './pages/Landingpage';
-import LoginPatient from './pages/Login';
-import DoctorLogin from './pages/LoginD';
-import Medical from './pages/MedicalRecords';
-import Notfound from './pages/Notfound';
-import Signup from './pages/Signup';
-import Prescription from './pages/prescription';
+import UserProfile from './components/Userprofile/UserProfile';
+import Appointments from './pages/Appointments/Appointmentable';
+import Appt from './pages/Appointments/Apptpage';
+import DashContent from './pages/Dashboard/DashContent';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Landingpage from './pages/Landing/Landingpage';
+import Medical from './pages/MedicalRecords/MedicalRecords';
+import Notfound from './pages/NotFound/Notfound';
+import PrescriptionForm from './pages/Prescriptions/EditPres';
+import Prescription from './pages/Prescriptions/prescription';
+import LoginPatient from './pages/Register/Login';
+import DoctorLogin from './pages/Register/LoginD';
+import Signup from './pages/Register/Signup';
 
 function App() {
   return (

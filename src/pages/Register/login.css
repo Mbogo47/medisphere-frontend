@@ -1,0 +1,74 @@
+@import url('../../App.css');
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 8px;
+    margin: 5% 20%;
+    font-weight: 700;
+    background-color: var(--green);
+    /* width: 80%; */
+}
+
+input,
+textarea,
+select {
+    margin: 5px;
+    width: 50%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid var(--green);
+    padding: 5px;
+    font-weight: 500;
+    text-transform: none;
+    /* text-align: center; */
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.btn-log {
+    margin: 5px;
+    padding: 5px;
+    width: 30%;
+    background-color: #004c6d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    font-weight: 400;
+}
+
+.signin {
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.log {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.error-message {
+    color: rgb(109, 8, 8);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.u-dept-fix {
+    color: black !important;
+}

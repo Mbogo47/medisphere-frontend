@@ -1,0 +1,43 @@
+@import url('../../App.css');
+
+#about {
+    background-color: #fff;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: -70px;
+}
+
+.row .image {
+    flex: 1 1 45rem;
+    display: flex;
+    justify-content: center;
+}
+
+.row .image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.row .content {
+    flex: 1 1 45%;
+}
+
+.row .content h3 {
+    color: var(--black);
+    text-shadow: var(--text-shadow);
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+.row .content p {
+    color: var(--black);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
